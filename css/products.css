@@ -13,18 +13,57 @@
 /* Media Query for smaller screens (Mobile Devices) */
 @media (max-width: 768px) {
   .products-section h2 {
-    font-size: 1.8rem; /* Smaller font size for mobile */
-    margin-bottom: 30px; /* Adjust margin if needed */
+    font-size: 2rem; /* Ensure h2 stays larger than h3 */
+    margin-bottom: 30px;
+  }
+
+  .product-category h3 {
+    font-size: 1.8rem; /* Slightly smaller h3 on mobile */
+  }
+
+  /* Align brands vertically on mobile */
+  .brands-list {
+    flex-direction: column;
+  }
+
+  .brand-item {
+    margin: 10px 0;
+    width: 100%;
   }
 }
 
-.brands-list {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+/* Styling for Product Categories (Mobiles, Laptops, etc.) */
+.product-category {
+  margin-bottom: 40px;
 }
 
+.product-category h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.product-category p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.section-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffeb3b;
+  color: #333;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.section-button:hover {
+  background-color: #00bcd4;
+}
+
+/* Brand Item Styling (Apple, Samsung) */
 .brand-item {
   width: 250px;
   padding: 20px;
@@ -34,6 +73,7 @@
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
+  margin: 20px;
 }
 
 .brand-item:hover {
@@ -56,6 +96,7 @@
   margin-bottom: 20px;
 }
 
+/* View Products Button (New, Second Hand) */
 .view-products-button {
   display: inline-block;
   padding: 10px 20px;
@@ -69,4 +110,18 @@
 
 .view-products-button:hover {
   background-color: #00bcd4;
+}
+
+.product-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Brands List Layout */
+.brands-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
