@@ -13,26 +13,27 @@
 /* Media Query for smaller screens (Mobile Devices) */
 @media (max-width: 768px) {
   .products-section h2 {
-    font-size: 2rem; /* Ensure h2 stays larger than h3 */
+    font-size: 2rem;
     margin-bottom: 30px;
   }
 
   .product-category h3 {
-    font-size: 1.8rem; /* Slightly smaller h3 on mobile */
+    font-size: 1.8rem;
   }
 
-  /* Align brands vertically on mobile */
   .brands-list {
     flex-direction: column;
+    align-items: center;
   }
 
   .brand-item {
     margin: 10px 0;
-    width: 100%;
+    width: 90%;
+    max-width: 300px;
   }
 }
 
-/* Styling for Product Categories (Mobiles, Laptops, etc.) */
+/* Product Categories Styling */
 .product-category {
   margin-bottom: 40px;
 }
@@ -63,7 +64,7 @@
   background-color: #00bcd4;
 }
 
-/* Brand Item Styling (Apple, Samsung) */
+/* Brand Item Styling */
 .brand-item,
 .provider-item {
   width: 250px;
@@ -101,7 +102,7 @@
   margin-bottom: 20px;
 }
 
-/* View Products Button (New, Second Hand) */
+/* View Products Button Styling */
 .view-products-button {
   display: inline-block;
   padding: 10px 20px;
@@ -149,15 +150,14 @@
   margin-bottom: 30px;
 }
 
-/* Data Providers List Layout (Horizontal Layout on Desktop) */
+/* Data Providers List Layout */
 .providers-list {
   display: flex;
-  justify-content: center; /* Align items to the left */
+  justify-content: center;
   gap: 30px;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
-/* Apply Laptop Section Styling to Data Providers */
 .provider-item {
   width: 250px;
   padding: 20px;
@@ -193,13 +193,30 @@
 /* Media Query for smaller screens (Mobile Devices) */
 @media (max-width: 768px) {
   .providers-list {
-    flex-direction: column; /* Stack provider items vertically on mobile */
-    gap: 20px; /* Adjust gap for mobile */
+    flex-direction: column;
+    align-items: center; /* Center provider items horizontally */
+    gap: 15px; /* Reduced gap for mobile */
+    padding: 0 15px; /* Padding to avoid overflow */
   }
 
   .provider-item {
-    width: 100%; /* Make provider items full width on mobile */
-    margin-bottom: 20px;
+    width: 90%;
+    max-width: 300px; /* Ensure boxes are not too wide */
+    padding: 15px; /* Reduced padding for smaller screens */
+    margin: 0 auto 20px; /* Center items and maintain spacing */
+  }
+}
+
+/* Media Query for very small screens (Phones) */
+@media (max-width: 480px) {
+  .providers-list {
+    gap: 10px; /* Further reduced gap for smaller screens */
+  }
+
+  .provider-item {
+    width: 85%;
+    max-width: 250px; /* Compact size for very small screens */
+    padding: 10px;
   }
 }
 
@@ -215,57 +232,52 @@
   color: white;
 }
 
-/* AirPods Images Grid Layout */
 .airpods-images {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 images per row on desktop */
-  gap: 40px; /* Reduced space between images */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   justify-items: center;
   margin-top: 30px;
 }
 
 .airpod-image {
-  width: 250px; /* Fixed width */
-  height: 250px; /* Fixed height */
-  object-fit: cover; /* Ensure the image covers the container area without stretching */
-  border-radius: 10px; /* Optional: for rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
 
-/* Hover effect for each image */
 .airpod-image:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.05);
 }
 
-/* Media Query for smaller screens (Mobile Devices) */
 @media (max-width: 768px) {
   #airpods-products h3 {
-    font-size: 2rem; /* Slightly smaller h3 on mobile */
+    font-size: 2rem;
     margin-bottom: 30px;
   }
 
-  /* AirPods images will be shown in 2 columns on mobile */
   .airpods-images {
-    grid-template-columns: repeat(2, 1fr); /* 2 images per row on mobile */
-    gap: 8px; /* Reduced gap on mobile */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
   .airpod-image {
-    width: 200px; /* Fixed width on mobile */
-    height: 200px; /* Fixed height on mobile */
+    width: 200px;
+    height: 200px;
   }
 }
 
 @media (max-width: 480px) {
-  /* AirPods images will be shown in 1 column on very small screens */
   .airpods-images {
-    grid-template-columns: 1fr; /* 1 image per row on very small screens */
-    gap: 6px; /* Further reduced gap on very small screens */
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .airpod-image {
-    width: 150px; /* Fixed width on very small screens */
-    height: 150px; /* Fixed height on very small screens */
+    width: 150px;
+    height: 150px;
   }
 }
