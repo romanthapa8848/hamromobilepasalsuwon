@@ -1,0 +1,136 @@
+/* Hero Section Styles */
+.hero-container {
+  height: 500px; /* Set the height of the hero container */
+  overflow: hidden; /* Hide any overflow from images */
+}
+
+.hero {
+  position: relative; /* For positioning child elements */
+  height: 100%; /* Use full height of the container */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Center text */
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Remove any margin */
+}
+
+/* Container for the image slides */
+.hero-gallery {
+  display: flex; /* Arrange images in a row */
+  transition: transform 1s ease-in-out; /* Smooth sliding transition */
+  height: 100%; /* Ensure the container takes full height */
+  width: 100%; /* Ensure the container takes full width */
+  position: absolute; /* Positioning the gallery absolutely */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+}
+
+.hero-gallery img {
+  min-width: 100%; /* Each image should fill the viewport width */
+  height: 100%; /* Set height to fill the hero section */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Hero Text Styles */
+.hero-content {
+  position: absolute; /* Position the text over the images */
+  color: #fff; /* White text */
+  z-index: 10; /* Ensure text is above images */
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 40px; /* Font size for the main heading */
+  font-weight: 700; /* Bold text */
+  text-shadow: 0 0 5px #d50032, 0 0 10px #d50032, 0 0 15px #d50032; /* Neon red glow */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.hero-content p {
+  font-size: 18px; /* Font size for the description */
+  color: #fff; /* White color for text */
+  text-shadow: 0 0 5px #1565c0, 0 0 10px #1565c0; /* Neon blue glow */
+  margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.hero-content button {
+  font-family: "Orbitron", sans-serif; /* Apply the Orbitron font */
+  padding: 12px 25px;
+  background-color: #25d366; /* WhatsApp green */
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; /* White text */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  animation: heartbeat 1.5s infinite; /* Heartbeat animation */
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1); /* Start at normal size */
+  }
+  25% {
+    transform: scale(1.1); /* Scale up */
+  }
+  50% {
+    transform: scale(1); /* Return to normal size */
+  }
+  75% {
+    transform: scale(1.1); /* Scale up again */
+  }
+  100% {
+    transform: scale(1); /* Return to normal size */
+  }
+}
+
+/* Hover effect */
+.hero-content button:hover {
+  animation: none; /* Remove heartbeat animation on hover */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero-container {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .hero-gallery {
+    transition: transform 1s ease-in-out; /* Keep the same transition */
+  }
+
+  .hero-gallery img {
+    min-width: 100%; /* Each image should still fill the viewport width */
+    height: 100%; /* Maintain height to fill the hero section */
+    object-fit: cover; /* Ensure the image covers the area */
+  }
+
+  .hero-content h1 {
+    font-size: 1.2rem; /* Smaller font size on mobile */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Smaller text on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    height: 250px; /* Further adjust height for very small screens */
+  }
+
+  .hero-content h1 {
+    font-size: 1.2rem; /* Smaller font size on mobile */
+  }
+
+  .hero-content p {
+    font-size: 14px; /* Even smaller text on very small screens */
+  }
+
+  .hero-content button {
+    padding: 10px 20px; /* Smaller button padding on small screens */
+  }
+}

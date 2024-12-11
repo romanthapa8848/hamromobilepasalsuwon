@@ -1,0 +1,77 @@
+/* Contact Section Styles */
+.contact-section {
+  padding: 60px 20px;
+  background-color: #f1f1f1;
+  color: #333;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Ensure text is centered */
+}
+
+.contact-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.contact-info a {
+  color: #d50032;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%; /* Make the form take full width */
+  margin: 0 auto; /* Center the form horizontally */
+  align-items: center; /* Center form elements horizontally */
+}
+
+form label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Ensure inputs and textarea take up the full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #d50032;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif; /* Apply the Orbitron font */
+  width: 100%; /* Make button full width */
+}
+
+form button:hover {
+  background-color: #ff4081;
+}

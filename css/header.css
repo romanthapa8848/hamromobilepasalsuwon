@@ -1,0 +1,197 @@
+/* Import the stylish Orbitron font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap");
+
+/* Reset styles for body */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #000; /* Dark background for neon effect */
+  font-family: "Orbitron", sans-serif; /* Apply the Orbitron font */
+}
+
+/* Header styles */
+header {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between logo and menu */
+  align-items: center; /* Center items vertically */
+  background-color: black; /* No background color initially */
+  position: sticky; /* Make the header sticky */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure the header is above other elements */
+  padding: 0; /* Remove all padding */
+  margin: 0; /* Remove all margin */
+  width: 100%; /* Ensure header takes the full width of the viewport */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  height: 90px; /* Set a height for the header */
+}
+
+/* Logo styles */
+.logo {
+  display: flex; /* Use flexbox to align logo and shop info */
+  align-items: center; /* Align vertically */
+  padding-left: 10px;
+}
+
+.logo img {
+  height: 60px; /* Increase logo size */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between logo and shop name */
+}
+
+/* Shop Info (name and address) styles */
+.shop-info {
+  display: flex;
+  flex-direction: column; /* Stack shop name and address vertically */
+  justify-content: center; /* Center align the text */
+}
+
+.shop-name {
+  font-size: 20px; /* Font size for the shop name */
+  font-weight: bold; /* Bold text for emphasis */
+  color: #d50032; /* Neon red for shop name */
+  text-shadow: 0 0 5px #d50032, 0 0 10px #d50032, 0 0 15px #d50032; /* Neon glow effect */
+}
+
+.address {
+  font-size: 14px; /* Smaller font for the address */
+  color: #1565c0; /* Neon blue for address */
+  text-shadow: 0 0 5px #1565c0, 0 0 10px #1565c0; /* Neon blue glow */
+  margin-top: 5px; /* Space between the name and the address */
+}
+
+/* Navigation menu styles */
+nav {
+  display: flex; /* Show the menu as flex on larger screens */
+}
+
+/* Navigation links styles */
+nav ul {
+  display: flex; /* Display the nav links horizontally */
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+/* Style each list item */
+nav ul li {
+  margin: 0 10px; /* Space between horizontal items */
+}
+
+/* Style the links */
+nav ul li a {
+  color: #fff; /* Default white color for links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 16px; /* Font size for desktop links */
+  position: relative; /* Needed for positioning the underline */
+  padding: 10px; /* Add padding around links for better spacing */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  font-family: "Orbitron", sans-serif; /* Apply the Orbitron font to links */
+}
+
+/* Change link color to neon red when header is sticky */
+header.sticky nav ul li a {
+  color: #d50032; /* Neon red when scrolling */
+}
+
+/* Futuristic underline effect */
+nav ul li a::after {
+  content: ""; /* Add pseudo-element after the link */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Underline height */
+  background-color: #d50032; /* Neon red underline */
+  transition: width 0.3s ease; /* Smooth transition for width expansion */
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Full width underline on hover */
+}
+
+/* Optional hover effect */
+nav ul li a:hover {
+  color: #d50032; /* Neon red hover color */
+}
+
+/* Hide the menu icon on larger screens */
+.menu-icon {
+  display: none; /* Hide menu icon on larger screens */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  /* Adjust the top position of the nav to avoid overlap with the header */
+  nav {
+    display: none; /* Hide nav by default */
+    position: fixed; /* Fix position to cover the screen */
+    top: 90px; /* Ensure the nav starts right below the header (height of header is 90px) */
+    right: 0; /* Align to the right */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background for mobile menu */
+    width: 50vw; /* Set the width to half of the viewport width */
+    height: calc(
+      100vh - 90px
+    ); /* Set height to full viewport height minus header height */
+    border-radius: 0; /* No rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow for depth */
+    transform: translateX(100%); /* Start hidden off-screen */
+    transition: transform 0.3s ease; /* Smooth transition for appearance */
+  }
+
+  /* Show the navigation when the menu icon is clicked */
+  nav.active {
+    display: block; /* Show the menu when active */
+    transform: translateX(0); /* Slide in from the right */
+  }
+
+  nav.active ul {
+    display: flex; /* Use flex layout */
+    flex-direction: column; /* Stack items vertically */
+    padding: 0; /* No padding around the menu */
+    margin: 0; /* No margin around the menu */
+    height: 100%; /* Full height of the nav */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Reduced space between vertical items */
+  }
+
+  nav ul li a {
+    color: white; /* Link color for mobile menu */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px; /* Reduced padding for mobile links */
+    font-size: 18px; /* Increase font size for better visibility */
+    display: block; /* Make the entire area clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+
+  /* Optional hover effect */
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    color: #d50032; /* Neon red on hover */
+  }
+
+  /* Show the menu icon on smaller screens */
+  .menu-icon {
+    display: block; /* Show menu icon on mobile */
+    cursor: pointer; /* Change cursor to pointer */
+    margin-right: 20px; /* Add margin to the right */
+    color: #d50032; /* Neon red initially */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+
+  .menu-icon span {
+    display: block; /* Stack spans vertically */
+    height: 3px; /* Thickness of the icon lines */
+    width: 25px; /* Width of the icon lines */
+    background: currentColor; /* Use current color for icon lines */
+    margin: 4px 0; /* Space between lines */
+  }
+}
+
+/* Change menu icon color when header is sticky */
+header.sticky .menu-icon {
+  color: #ff4081; /* Neon pink when scrolling */
+}
