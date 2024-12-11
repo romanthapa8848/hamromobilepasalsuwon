@@ -64,7 +64,8 @@
 }
 
 /* Brand Item Styling (Apple, Samsung) */
-.brand-item {
+.brand-item,
+.provider-item {
   width: 250px;
   padding: 20px;
   background-color: #333;
@@ -76,22 +77,26 @@
   margin: 20px;
 }
 
-.brand-item:hover {
+.brand-item:hover,
+.provider-item:hover {
   transform: translateY(-10px);
 }
 
-.brand-item img {
+.brand-item img,
+.provider-item img {
   width: 100px;
   height: auto;
   margin-bottom: 15px;
 }
 
-.brand-item h4 {
+.brand-item h4,
+.provider-item h4 {
   font-size: 1.5rem;
   margin: 15px 0;
 }
 
-.brand-item p {
+.brand-item p,
+.provider-item p {
   font-size: 1rem;
   margin-bottom: 20px;
 }
@@ -124,4 +129,76 @@
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+}
+
+/* Data Providers Section Styling */
+.data-plans-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.data-plans-section h3 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.data-plans-section p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* Data Providers List Layout (Horizontal Layout on Desktop) */
+.providers-list {
+  display: flex;
+  justify-content: center; /* Align items to the left */
+  gap: 30px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Apply Laptop Section Styling to Data Providers */
+.provider-item {
+  width: 250px;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  margin: 20px;
+}
+
+.provider-item:hover {
+  transform: translateY(-10px);
+}
+
+.provider-item img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.provider-item h4 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+.provider-item p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Media Query for smaller screens (Mobile Devices) */
+@media (max-width: 768px) {
+  .providers-list {
+    flex-direction: column; /* Stack provider items vertically on mobile */
+    gap: 20px; /* Adjust gap for mobile */
+  }
+
+  .provider-item {
+    width: 100%; /* Make provider items full width on mobile */
+    margin-bottom: 20px;
+  }
 }
