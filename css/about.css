@@ -15,6 +15,7 @@
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+  text-align: justify; /* Improves readability */
 }
 
 .about-section p a {
@@ -24,4 +25,91 @@
 
 .about-section p a:hover {
   text-decoration: underline;
+}
+
+/* Social Media Section */
+.social-media {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-media h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.social-media .social-icon {
+  margin: 0 10px;
+  font-size: 20px;
+  color: #d50032;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-media .social-icon:hover {
+  color: #fff;
+}
+
+/* Map Container */
+.map-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.map-container iframe {
+  width: 100%;
+  max-width: 600px; /* Restrict maximum width */
+  height: 350px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 15px; /* Reduced padding for smaller screens */
+  }
+
+  .about-section h2 {
+    font-size: 26px; /* Slightly smaller heading on mobile */
+  }
+
+  .about-section p {
+    font-size: 16px; /* Smaller font size for better readability */
+    text-align: left; /* Align text to the left for a cleaner look */
+  }
+
+  .social-media h2 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  .social-media .social-icon {
+    font-size: 18px; /* Adjust icon size */
+    margin: 0 8px; /* Adjust spacing */
+  }
+
+  .map-container iframe {
+    height: 300px; /* Reduce map height */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 30px 10px; /* Further reduced padding for very small screens */
+  }
+
+  .about-section h2 {
+    font-size: 22px; /* Smaller heading for very small screens */
+  }
+
+  .about-section p {
+    font-size: 14px; /* Smaller font for compact screens */
+  }
+
+  .map-container iframe {
+    height: 250px; /* Smaller height for very small screens */
+  }
+
+  .social-media .social-icon {
+    font-size: 16px; /* Further reduce icon size */
+  }
 }
