@@ -233,15 +233,14 @@
 }
 
 .airpods-images {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  justify-items: center;
-  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Space between images */
+  gap: 20px; /* Space between rows and columns */
 }
 
 .airpod-image {
-  width: 250px;
+  width: 30%; /* 3 images per row, taking up 30% of the width */
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
@@ -260,24 +259,22 @@
   }
 
   .airpods-images {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 15px; /* Adjust gap for smaller screens */
   }
 
   .airpod-image {
-    width: 200px;
-    height: 200px;
+    width: 45%; /* 2 images per row on tablet */
+    height: 220px;
   }
 }
 
 @media (max-width: 480px) {
   .airpods-images {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 10px; /* Further reduce gap for smaller screens */
   }
 
   .airpod-image {
-    width: 150px;
-    height: 150px;
+    width: 90%; /* 1 image per row on mobile */
+    height: 300px;
   }
 }
