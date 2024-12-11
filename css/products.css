@@ -202,3 +202,70 @@
     margin-bottom: 20px;
   }
 }
+
+/* AirPods Products Section Styling */
+#airpods-products {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#airpods-products h3 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+/* AirPods Images Grid Layout */
+.airpods-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 images per row on desktop */
+  gap: 40px; /* Reduced space between images */
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.airpod-image {
+  width: 250px; /* Fixed width */
+  height: 250px; /* Fixed height */
+  object-fit: cover; /* Ensure the image covers the container area without stretching */
+  border-radius: 10px; /* Optional: for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for each image */
+.airpod-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Media Query for smaller screens (Mobile Devices) */
+@media (max-width: 768px) {
+  #airpods-products h3 {
+    font-size: 2rem; /* Slightly smaller h3 on mobile */
+    margin-bottom: 30px;
+  }
+
+  /* AirPods images will be shown in 2 columns on mobile */
+  .airpods-images {
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row on mobile */
+    gap: 8px; /* Reduced gap on mobile */
+  }
+
+  .airpod-image {
+    width: 200px; /* Fixed width on mobile */
+    height: 200px; /* Fixed height on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  /* AirPods images will be shown in 1 column on very small screens */
+  .airpods-images {
+    grid-template-columns: 1fr; /* 1 image per row on very small screens */
+    gap: 6px; /* Further reduced gap on very small screens */
+  }
+
+  .airpod-image {
+    width: 150px; /* Fixed width on very small screens */
+    height: 150px; /* Fixed height on very small screens */
+  }
+}
